@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var person = {
+                Email:"",
+                NIM:"",
+                Nama:"",
+                Hobbies:[],
+
+                AddBio : function (pEmail,pNIM,pNama){
+                    person.Email=pEmail;
+                    person.NIM=pNIM;
+                    person.Nama=pNama;
+
+                },
+                AddHobby : function(pHobby){
+                    this.Hobbies.push(pHobby);
+                },
+
+                Write  : function (){
+                    var str="Bio : "+this.Email +","+this.NIM+","+this.Nama;
+                    var hobb = "Hobbies : ";
+                    var item;
+                    for (item of this.Hobbies){
+                        hobb += item +" ";
+                    }
+                    return str + " " + hobb;
+                }
+            
+            }
+
+            function AddBioInfo(pEmail,pNIM,pNama){
+                person.AddBio(pEmail,pNIM,pNama);
+            }
+            function AddHobby(pHobby){
+                person.AddHobby(pHobby)
+            }
+            function LoadObject(){
+                document.getElementById("oResult").innerHTML = person.Write();
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="iEmail" placeholder="Masukan email">
+        <input type="text" id="iNIM" placeholder="Masukan NIM">
+        <input type="text" id="iNama" placeholder="Masukan Nama">
+
+
+        <button type="button" 
+            onclick='AddBioInfo(
+            document.getElementById("iEmail").value,
+            document.getElementById("iNIM").value,
+            document.getElementById("iNama").value)'>Add Bio Info </button>
+        <br><br>
+        <input type="text" id="iHobby" style="width: 500px;"  placeholder="masukan tokai anda">
+        <button type="button" onclick='preson.AddHobby(document.getElementById("iHobby").value)'>Add</button>
+      
+        <br><br>
+
+        <button type="button" onclick='LoadObject()'>Load</button>
+        <div id="oResult"></div>
+
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Script Intro</title>
+        <style>
+            .Makered{
+                color: chartreuse;
+                font-weight: 800;
+                font-style: italic;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            .hide{
+                visibility: hidden;
+            }
+            .show{
+                visibility: visible;
+            }
+        </style>
+        <script>
+            function ChangeAll(str){
+                document.getElementById("cLine1").innerHTML = str;
+                document.getElementById("cLine2").innerHTML = str;
+                document.getElementById("cLine1").className = "Makered";
+                document.getElementById("cLine2").className = "Makered";
+            }
+        </script>
+    </head>
+    <body>
+        <p id="cLine1">fdfdfkdjfkjckndvkn kjdfkjdfkdjfkdkdnfkn kdfnkdnfdkfkdj dkjfdkjfkdfkdjfkvknknfkdnfkd</p>
+        <p id="cLine2">fdfdfkdjfkjckndvkn kjdfkjdfkdjfkdkdnfkn kdfnekdnfdkfkdj dkjfdkjfkdfkdjfkvknknfkdnfkd</p>
+          
+        <button type="button" onclick='ChangeAll("hello hai")'>Change All</button>
+    </body>
+</html>

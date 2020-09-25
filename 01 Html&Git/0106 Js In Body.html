@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Java Script Intro</title>
+    <style>
+           .red{
+                color: chartreuse;
+                font-weight: 800;
+                font-style: italic;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            .hide{
+                visibility: hidden;
+            }
+            .show{
+                visibility: visible;
+            }
+    </style>
+ </head>
+ <body>
+    <button type="button" onclick='changelinestyle()'>GO</button>
+    <p id="cLine1">aaaaaaaaaaaaaaaaaaaaaaafgaaaa aaaaaaabbbbbbbbbbbbbbbbbbbbbbbccc vscscfdfdfdfdfdfdfdscxc sfdf</p>
+
+    <button type="button" onclick='changestyle("cLine2","hide")'>hide</button>
+    <button type="button" onclick='changestyle("cLine2","Show")'>Show</button>
+
+    <p id="cLine2">dfdgdggdg dfjdkfjdkjfdkjfdkj fdfdgdgfgbgykujn sfrgfhgfhfdgyrhfbfggtrgf dgfhggghgg dkf</p>
+     
+    <script>
+          function cangelinestyle(){
+                document.getElementById("cLine1").className = "red";
+            }
+            function changestyle(iid,classname){
+                 document.getElementById(id).className = classname;
+            }
+    </script>
+ </body>
+</html>

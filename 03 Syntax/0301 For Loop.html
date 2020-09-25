@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Script Intro</title>
+        <script>
+            var str="fgfd fgdgdf dg bfvbdhgb fghfb  gf hfb ghfg fghfg";
+            function ForLoop(iteration){
+              for(i=0;i<iteration;i++){
+                document.getElementById("oResult").innerHTML+=str +"<br />";
+                document.getElementById("oResult").innerHTML = document.getElementById("oResult").innerHTML +str+"<br />";
+                
+              }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="number" id="iLoop" placeholder="Type  number of iteration" style="width: 500px;">
+        <button type="button" onclick='ForLoop(document.getElementByIdI("iLoop").value)'>GO</button>
+        <p id="oResult"></p>
+    </body>
+</html>

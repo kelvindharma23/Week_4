@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var obj = {};
+            obj.add = function(val1,val2){
+                var inner = function(){
+                    this.sum = val1 + val2;
+                }
+                inner();
+            }
+            function Show(){
+                document.getElementById("oResult").innerHTML = obj.sum;
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick='obj.add(2,4);'>adition</button>
+        <br><br>
+        <button type="button" onclick='Show()'>show</button>
+        <p id="oResult"></p>
+    </body>
+</html>

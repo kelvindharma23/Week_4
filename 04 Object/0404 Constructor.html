@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var saya;
+            function Person(pEmail,pNIM,pNama){
+                person.Email=pEmail;
+                person.NIM=pNIM;
+                person.Nama=pNama;
+                
+                this.ValidasiData = function(){
+                    if((this.Email != "") && (this.NIM != "") && (this.Nama != "")){
+                      return "ok";
+                  }
+                  else{
+                    return "NG";
+                  }
+                      
+                }
+
+
+            }
+
+            function CreateObject(pEmail,pNIM,pNama) {
+                saya = new person(pEmail,pNIM,pNama)
+                
+            }
+            function LoadObject() {
+                document.getElementById("iPerson").value=
+                "email : "+person.Email+" "+
+                "NIM : "+person.NIM+" "+
+                "Nama : "+person.Nama+" "+
+                "Validasi : "+person.ValidasiData();
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="iEmail" placeholder="Masukan email">
+        <input type="text" id="iNIM" placeholder="Masukan NIM">
+        <input type="text" id="iNama" placeholder="Masukan Nama">
+
+        
+        <button type="button" 
+            onclick='CreateObject(
+            document.getElementById("iEmail").value,
+            document.getElementById("iNIM").value,
+            document.getElementById("iNama").value)'>Create</button>
+        <br><br>
+
+
+        
+        <button type="button" onclick='LoadObject()'>Load</button>
+        <input type="text"  id="iPerson" style="width: 500px;" readonly/>
+
+    </body>
+</html>

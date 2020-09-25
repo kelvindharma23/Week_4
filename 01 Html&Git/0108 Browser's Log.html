@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Script Intro</title>
+        <style>
+            .Makered{
+                color: chartreuse;
+                font-weight: 800;
+                font-style: italic;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            .hide{
+                visibility: hidden;
+            }
+            .show{
+                visibility: visible;
+            }
+        </style>
+        <script>
+            function ChangeStyle(pId,pClassName){
+                console.log(pId);
+                console.log(pClassName);
+                document.getElementById(pId).className = pClassName;
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick='ChangeStyle("cLine1","Makered")'>GO</button>
+        <p id="cLine1"> efdfdfd fdfdfdfd vcvfg thgfh fg fggdfdgfg gfgfvft5rtgfvf gfgf</p>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Script Intro</title>
+        <style>
+            .red{
+                color: chartreuse;
+                font-weight: 800;
+                font-style: italic;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            .hide{
+                visibility: hidden;
+            }
+            .show{
+                visibility: visible;
+            }
+        </style>
+        <script>
+            function changeline2(){
+
+            }
+            function changelinestyle(){
+                document.getElementById("Line1").className = "red";
+            }
+            function changestyle(iid,classname){
+                 document.getElementById(id).className = classname;
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick='changelinestyle()'>Go</button>
+        <p id="Line1">khfkdhkd dkfjdkjfdkjfkdjf cmnjdhvnjnjd dfkjdjfkvndkfkd kjfdkjfkdjfdkjfkdjf</p>
+
+        <button type="button" onclick='changestyle("Line2","hide")'>hide</button>
+        <button type="button" onclick='changestyle("Line2","show")'>show</button>
+        <p id="Line2">afdfadfadfd dfadfdfa dafadfadfadf adfafadf adfadfadfda</p>
+    </body>
+</html>

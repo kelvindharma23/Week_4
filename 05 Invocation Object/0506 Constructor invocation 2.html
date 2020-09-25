@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function base(){
+             this.value = 500;
+            }
+            var Child = new base();
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick='document.getElementById("oResult").innerHTML = child.value;'>addition</button>
+        <br><br>
+        <p id="oResult"></p>
+    </body>
+</html>

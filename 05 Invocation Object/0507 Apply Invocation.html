@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var add = function(num1,num2){
+                return num1+num2;
+            }
+            function GetResult(){
+                array=[3,4];
+                return add.apply(null,array);
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onclick='document.getElementById("oResult").innerHTML =GetResult()'>addition</button>
+        <br><br>
+        <p id="oResult"></p>
+    </body>
+</html>
